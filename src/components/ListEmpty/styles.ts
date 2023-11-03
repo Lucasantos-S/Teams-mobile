@@ -9,7 +9,7 @@ export const Container = styled.View`
 
 export const Message = styled.Text`
   text-align: center;
-  margin-top: 20;
+  margin-top: 20px;
 
   font-size: ${(props) => props.theme.FONT_SIZE.SM}px;
   font-family: ${(props) => props.theme.FONT_FAMILY.REGULAR};
