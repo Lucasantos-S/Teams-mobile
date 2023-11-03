@@ -7,7 +7,7 @@ export const Input = styled(TextInput).attrs((props) => ({
   flex: 1;
 
   max-height: 56px;
-  min-width: 56px;
+  min-height: 56px;
   border-radius: 6px;
   padding: 16px;
 

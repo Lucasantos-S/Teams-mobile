@@ -7,3 +7,12 @@ export const Container = styled.View`
   `}
   padding: 24px;
 `;
+
+export const Form = styled.View`
+  width: 100%;
+  height: 56px;
+  flex-direction: row;
+  background: ${(props) => props.theme.COLORS.GRAY_700};
+
+  border-radius: 6px;
+`;
