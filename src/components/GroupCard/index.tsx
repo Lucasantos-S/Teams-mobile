@@ -1,10 +1,11 @@
-import React from "react";
-import { Container, UsersIcon } from "./styles";
+import { Container, Title, UsersIcon } from "./styles";
+import { IGrupoCardProps } from "./GroupCard.structure";
 
-export function GroupCard() {
+export function GroupCard({ title, ...rest }: IGrupoCardProps) {
   return (
-    <Container>
+    <Container {...rest}>
       <UsersIcon />
+      <Title>{title}</Title>
     </Container>
   );
 }
