@@ -6,9 +6,12 @@ import { Highligth } from "@/components/Highligth";
 import { GroupCard } from "@/components/GroupCard";
 import { ListEmpty } from "@/components/ListEmpty";
 import { Button } from "@/components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 export function Groups() {
   const [groups, setGroups] = React.useState([] as string[]);
+
+  const navigation = useNavigation();
 
   const renderGroup = React.useMemo(() => {
     return (
@@ -20,15 +23,20 @@ export function Groups() {
         ListEmptyComponent={() => (
           <ListEmpty message="Nenhuma turma cadastrada, que tal cadastrar?" />
         )}
+        showsVerticalScrollIndicator={false}
       />
     );
   }, [groups]);
+
+  function handleNewGroup() {
+    navigation.navigate("new");
+  }
   return (
     <Container>
       <Header />
       <Highligth title="Turmas" subTitle="jogue com a sua turma" />
       {renderGroup}
-      <Button title="Cadastrar turmas" />
+      <Button title="Cadastrar turmas" onPress={handleNewGroup} />
     </Container>
   );
 }
