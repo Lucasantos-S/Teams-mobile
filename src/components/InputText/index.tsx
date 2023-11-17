@@ -10,5 +10,11 @@ type Props = TextInputProps & {
 export function InputText({ inputRef, ...rest }: Props) {
   const { COLORS } = useTheme();
 
-  return <Container placeholderTextColor={COLORS.GRAY_300} {...rest} />;
+  return (
+    <Container
+      ref={inputRef}
+      placeholderTextColor={COLORS.GRAY_300}
+      {...rest}
+    />
+  );
 }

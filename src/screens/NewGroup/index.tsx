@@ -13,7 +13,7 @@ export function NewGroup() {
   const [group, setGroup] = React.useState("");
   const navigation = useNavigation();
 
-  async function handlePlayes() {
+  async function handleCreateNewGroup() {
     try {
       if (!group.trim())
         return Alert.alert("Novo Grupo", "Informe o nome da turma");
@@ -37,7 +37,7 @@ export function NewGroup() {
           subTitle="crie uma turma para adicionar pessoas"
         />
         <InputText placeholder="Nome da turma" onChangeText={setGroup} />
-        <Button title="Criar" onPress={handlePlayes} />
+        <Button title="Criar" onPress={handleCreateNewGroup} />
       </Form>
     </Container>
   );
